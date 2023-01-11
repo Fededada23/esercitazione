@@ -85,6 +85,14 @@ export default {
     .album{
         display: flex;
         align-items: center;
+        background-color: black;
+            .album-image{
+                border: 1px solid snow;
+            }
+       
+                h4{
+                    color:white
+                }
     }
 
 </style>    
