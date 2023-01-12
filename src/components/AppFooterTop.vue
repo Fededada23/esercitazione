@@ -1,7 +1,8 @@
 <script>
     export default {
         data(){
-            return{dcComicsLinks: [
+            return{
+                dcComicsLinks: [
                 {
                     text: 'Characters',
                     url: '#',
@@ -198,7 +199,7 @@
 
     #footer-top{
     height: 18rem;
-    background-image: url(../assets/images/footer-bg.jpg);
+    background-image: url(/images/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     }

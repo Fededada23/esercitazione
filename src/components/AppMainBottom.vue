@@ -39,7 +39,7 @@
             <ul>
                 <li v-for="(element, index) in mainBottomLinks" :key="index">
                     <a :href="element.url">
-            
+                        <img :src="`/images/${element.image}`">
                         <p>{{element.text}}</p>
                     </a>
                 </li>

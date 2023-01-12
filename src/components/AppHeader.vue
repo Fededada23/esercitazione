@@ -61,7 +61,7 @@
 <template lang="">
     <header>
         <a href="/" class="brand">
-            <img src="../assets/images/dc-logo.png">
+            <img :src="`/images/dc-logo.png`">
         </a>
         <nav>
             <ul>
