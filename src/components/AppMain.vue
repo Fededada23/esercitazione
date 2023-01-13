@@ -8,7 +8,12 @@ export default {
     data: function(){
         return {
             albumCards: [
-                
+                {
+                    "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
+                    "price": "$19.99",
+                    "series": "Action Comics",
+                    "type": "comic book"
+                },
                 {
                     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2020/09/AV1976_01_300-001_HD_5f738f6e39ddd7.18205602.jpg?itok=VgdYdJ01",
                     "price": "$3.99",
@@ -31,6 +36,12 @@ export default {
                     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/BM_56_300-001_HD_5ba137a85c3bf3.33122291.jpg?itok=3FHJQYJZ",
                     "price": "$3.99",
                     "series": "Batman",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/BM_56_300-001_HD_5ba137a85c3bf3.33122291.jpg?itok=3FHJQYJZ",
+                    "price": "$2.99",
+                    "series": "Batman Beyond",
                     "type": "comic book"
                 },
                 {
@@ -62,6 +73,12 @@ export default {
                     "price": "$4.99",
                     "series": "Batman: White Knight Presents: Harley Quinn",
                     "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/gn-covers/2019/04/CTWv1_CC_144-001_HD_5ca5299a751963.53054221.jpg?itok=ooPaoLDq",
+                    "price": "$16.99",
+                    "series": "Catwoman",
+                    "type": "graphic novel"
                 }
                 
             ]
@@ -76,23 +93,66 @@ export default {
         <div class="album">
             <AlbumCard v-for="(element, index) in albumCards" :key="index" :singleCard="element"/>
         </div>
-        <a href="#" class="load-more">load more</a>
     </div>
 </template>
 
 <style lang="scss">
-
-    .album{
-        display: flex;
-        align-items: center;
-        background-color: black;
-            .album-image{
-                border: 1px solid snow;
-            }
-       
-                h4{
-                    color:white
-                }
+    #jumbotron {
+    height: 20rem;
+    background-image: url('/images/jumbotron.jpg');
+    background-size: cover;
     }
 
+    #main-content{
+       
+
+    
+        .album{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            position: relative;
+            padding: 4rem 0;
+
+        
+        a{
+            background-color: black;
+        }
+        div.album-card {
+             width: calc((100% / 6) - 1rem);
+            .album-image{
+                width: 100%;
+                height: 15rem;
+                overflow: hidden;
+
+                img{
+                    width: 70%;
+
+                };
+            
+   
+       
+                h4{
+                    color:black
+                };
+
+            }
+        }   
+        &::before {
+        content: 'Current series';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        text-transform: uppercase;
+        font-weight: bold;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+        width: 12rem;
+        height: 4rem;
+        background-color: #0282f9;
+        } 
+        }
+    }   
 </style>    

@@ -79,7 +79,7 @@
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
     header{
-        height: 25vh;
+        height: 15vh;
         text-align: center;
         @include center;
         justify-content: space-around;
@@ -87,27 +87,27 @@
             width: 70%;
         }
         
-    }
-
-    ul{
-        list-style-type: none;
-        margin: 2rem 1rem;
-        @include center;
-        li a{
-            display: inline-block;
-            padding: 1rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s;
-            &.active, &:hover{
-                border-bottom: 4px solid $secondaryColor;
+        ul{
+            list-style-type: none;
+            margin: 2rem 1rem;
+            @include center;
+            li a{
+                display: inline-block;
+                padding: 1rem;
+                text-decoration: none;
+                font-weight: 600;
+                transition: background-color 0.3s;
+                &.active, &:hover{
+                    border-bottom: 4px solid $secondaryColor;
+                }
+                color: $fontColor;
+                text-transform: uppercase;
+                font-size: .8rem;
+                
             }
-            color: $fontColor;
-            text-transform: uppercase;
-            font-size: .8rem;
-            
+    
         }
-
     }
+
     
 </style>

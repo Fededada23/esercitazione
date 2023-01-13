@@ -49,8 +49,34 @@
 </template>
 <style lang="scss">
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
     #main-bottom{
         background-color:$secondaryColor;
+        ul{
+            list-style-type: none;
+            
+            @include center;
+            li a{
+                text-align: center;
+                display: inline-block;
+                padding: 1rem;
+                text-decoration: none;
+                font-weight: 600;
+                transition: background-color 0.3s;
+                &.active, &:hover{
+                    border-bottom: 4px solid $secondaryColor;
+                }
+                color: $fontColor;
+                text-transform: uppercase;
+                font-size: .8rem;
+                    img{
+                        width: 60px;
+                        height: 70px;
+                    }
+            }
+            
+            
+        }
             a{
                 color:white
     

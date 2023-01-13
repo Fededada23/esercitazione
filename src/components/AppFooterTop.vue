@@ -198,7 +198,7 @@
 @use '../styles/partials/mixins' as *;
 
     #footer-top{
-    height: 18rem;
+    height: 20rem;
     background-image: url(/images/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -217,11 +217,12 @@
             
             h4{
                 text-transform: uppercase;
+                color: white;
             }
             ul{
                 padding: 1rem 0;
                 li{
-                    font-size: .6rem;
+                    font-size: 15px;
                     a{
                         color: #b4b4b4;
                     }
