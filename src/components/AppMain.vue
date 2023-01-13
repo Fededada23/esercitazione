@@ -104,9 +104,6 @@ export default {
     }
 
     #main-content{
-       
-
-    
         .album{
             display: flex;
             flex-wrap: wrap;
@@ -115,44 +112,43 @@ export default {
             padding: 4rem 0;
 
         
-        a{
-            background-color: black;
-        }
-        div.album-card {
-             width: calc((100% / 6) - 1rem);
-            .album-image{
-                width: 100%;
-                height: 15rem;
-                overflow: hidden;
+            a{
+                background-color: black;
+            }
+            div.album-card {
+                width: calc((100% / 6) - 1rem);
+                .album-image{
+                    width: 100%;
+                    height: 15rem;
+                    overflow: hidden;
 
-                img{
-                    width: 70%;
+                    img{
+                        width: 160px;
 
-                };
-            
+                    };
+                
    
        
-                h4{
-                    color:black
-                };
-
-            }
-        }   
-        &::before {
-        content: 'Current series';
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        text-transform: uppercase;
-        font-weight: bold;
-        top: 0;
-        left: 0;
-        transform: translateY(-50%);
-        width: 12rem;
-        height: 4rem;
-        background-color: #0282f9;
-        } 
+                    h4{
+                        color:black
+                    };
+                }
+            }   
+            &::before {
+            content: 'Current series';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            text-transform: uppercase;
+            font-weight: bold;
+            top: 0;
+            left: 0;
+            transform: translateY(-50%);
+            width: 12rem;
+            height: 4rem;
+            background-color: #0282f9;
+            } 
         }
-    }   
+    }  
 </style>    

@@ -148,10 +148,32 @@
                     url: '#',
                     current: false,
                 },
+            ],
+            social: [
+                {
+                    logo: 'footer-facebook.png',
+                },
+                {
+                    logo: 'footer-periscope.png',
+                },
+                {
+                    logo: 'footer-pinterest.png',
+                },
+                {
+                    logo: 'footer-twitter.png',
+                },
+                {
+                    logo: 'footer-youtube.png',
+                },
             ]
         }
+    },
+    methods: {
+        getImagePath: function (img) {
+            return `/images/${img}`
+        }
     }
-}
+};
 </script>
 <template>
     <div id="footer-top">
@@ -188,17 +210,32 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-top-bg">
+            <div class="dc_bg">
+                <div class="img_dc_bg">
+                </div>
             </div>
         </div>
     </div>
+    <div class="social">
+            <div class="col-but">
+                <button class="footer-button">Sign-up now!</button>
+            </div>
+            <div class="icon">
+                <h3 class="follow">Follow us</h3>
+                <ul>
+                    <li v-for="(object, index) in social" :key="index">
+                        <a href="#"><img :src="getImagePath(object.logo)" alt="loghi"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 </template>
 <style lang="scss">
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
     #footer-top{
-    height: 20rem;
+    height: 30rem;
     background-image: url(/images/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -231,6 +268,50 @@
             
         }
     }
+    .dc_bg {
+        background-image: url(/images/dc-logo-bg.png);
+        background-size: cover;
+        background-position: right center;
+        width: 600px;
+    }
 
+    .social {
+    height: 150px;
+    background-color: #303030;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    @include upbold;
+    .icon {
+        display: flex;
+        align-items: center;
+        @include upbold;
+        ul {
+            display: flex;
+            gap: .5em;
+        }
+        li {
+            display: flex;
+            color: $white;
+            list-style: $listnone;
+            &:hover {
+                filter: brightness(100);
+            }
+        }
+        .follow {
+            @include upbold;
+            color: #0282f9;
+            padding-right: .5em;
+        }
+    }
+}
+.footer-button {
+    @include button;
+    &:hover {
+        font-size: 15px;
+        cursor: pointer;
+        filter: brightness(1.2);
+    }
+}
     
 </style>      
