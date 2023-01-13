@@ -97,6 +97,7 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../styles/partials/variables' as *;
     #jumbotron {
     height: 20rem;
     background-image: url('/images/jumbotron.jpg');
@@ -104,6 +105,7 @@ export default {
     }
 
     #main-content{
+        background-color: #1c1c1c;
         .album{
             display: flex;
             flex-wrap: wrap;
@@ -124,16 +126,16 @@ export default {
 
                     img{
                         width: 160px;
-
+                        
                     };
-                
-   
-       
-                    h4{
-                        color:black
-                    };
+                    
+                    
+                    
                 }
             }   
+            h4{
+                color:$gray
+            };
             &::before {
             content: 'Current series';
             display: flex;
